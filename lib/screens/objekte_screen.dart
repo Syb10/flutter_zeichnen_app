@@ -8,6 +8,19 @@ class ObjekteScreen extends StatefulWidget {
 class _ObjekteScreenState extends State<ObjekteScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Objekte"),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.blue[800], Colors.lightBlueAccent]
+              ),
+            ),
+          )
+      ),
+    );
   }
 }

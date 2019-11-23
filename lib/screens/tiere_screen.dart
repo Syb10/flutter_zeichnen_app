@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-class PersonenScreen extends StatefulWidget {
+class TiereScreen extends StatefulWidget {
   @override
-  _PersonenScreenState createState() => _PersonenScreenState();
+  _TiereScreenState createState() => _TiereScreenState();
 }
 
-class _PersonenScreenState extends State<PersonenScreen> {
+class _TiereScreenState extends State<TiereScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Personen"),
+        title: Text("Tiere"),
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Colors.red[700], Colors.orangeAccent]
+                  colors: [Colors.brown, Colors.orangeAccent]
               ),
             ),
-          )
+          ),
       ),
     );
   }

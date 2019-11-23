@@ -8,6 +8,12 @@ class ErgebnisScreen extends StatefulWidget {
 class _ErgebnisScreenState extends State<ErgebnisScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+
+        ],
+      ),
+    );
   }
 }
