@@ -71,10 +71,14 @@ class _LandschaftScreenState extends State<LandschaftScreen> {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(top: 30.0),
-                child: Row(
+                 child: Row(
                   children: <Widget>[
-                    buildBox("Wetter", '${wetter[indexWetter]}'),
-                    buildBox("Gebiet", '${gebiet[indexGebiet]}'),
+                    Expanded(child:
+                      buildBox("Wetter", '${wetter[indexWetter]}'),
+                    ),
+                    Expanded(
+                      child: buildBox("Gebiet", '${gebiet[indexGebiet]}'),
+                    ),
                   ],
                 ),
               ),
@@ -82,8 +86,13 @@ class _LandschaftScreenState extends State<LandschaftScreen> {
                 padding: const EdgeInsets.only(top: 20.0),
                 child: Row(
                   children: <Widget>[
-                    buildBox("Jahreszeit", '${jahreszeit[indexJahreszeit]}'),
-                    buildBox("Tageszeit", '${tageszeit[indexTageszeit]}'),
+                    Expanded(
+                        child:  buildBox("Jahreszeit", '${jahreszeit[indexJahreszeit]}'),
+                    ),
+                   Expanded(
+                     child: buildBox("Tageszeit", '${tageszeit[indexTageszeit]}'),
+                     ),
+
                   ],
                 ),
               ),
