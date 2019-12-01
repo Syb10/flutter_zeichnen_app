@@ -10,8 +10,9 @@ class WahlScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: Column(children: <Widget>[
-          buildButton(context, "Farbe", Colors.purple[400], Icons.color_lens, FarbenScreen()),
-          buildButton(context, "Objekte", Colors.blue[400], Icons.category, ObjekteScreen()),
+          //getListView(Icons.color_lens,"Farbe"),
+          //buildButton(context, "Farbe", Colors.purple[400], Icons.color_lens, FarbenScreen()),
+          //buildButton(context, "Objekte", Colors.blue[400], Icons.category, ObjekteScreen()),
           buildButton(context, "Landschaft", Colors.green[400], Icons.wb_sunny, LandschaftScreen()),
           buildButton(context, "Personen", Colors.orange[400], Icons.person, PersonenScreen()),
           buildButton(context, "Tiere", Colors.red[400], Icons.pets, TiereScreen()),
@@ -19,6 +20,21 @@ class WahlScreen extends StatelessWidget {
 
     );
   }
+
+  Widget getListView(icon,text){
+    var listView = ListView.builder(
+      itemBuilder: (context, index){
+        return ListTile(
+          leading: Icon(icon),
+          title: Text(text),
+          trailing: Icon(icon),
+        );
+      }
+
+    );
+    return listView;
+  }
+
   Container buildButton(BuildContext context, text, farbe, icon, widget) {
     return Container(
       width: double.infinity,
